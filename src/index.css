@@ -25,3 +25,23 @@ code {
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
   color:brown !important;
 }
+
+.searchbar{
+  width: 50% !important;
+  padding-left: 5px !important;
+  margin-top: 7%;
+  margin-left: 20%;
+  height: 35px;
+}
+
+#mySelect,.searchbutton {
+  border:1px solid black;
+  height: 35px !important;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.searchbutton{
+  color:black !important;
+  font-weight: 500 !important;
+}
