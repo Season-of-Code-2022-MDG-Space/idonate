@@ -1,10 +1,9 @@
 import React from 'react'
-
-export default function Searchbar() {
+export default function Searchbar(props) {
   return (
     <div>
       
-      <input className="searchbar" type="text" placeholder="Donations Ka Search Engine" autoComplete='off' aria-label="Search"/>
+      <input className="searchbar" id='Search' type="text" placeholder="Donations Ka Search Engine" autoComplete='off' aria-label="Search"/>
   
        <select id="mySelect">
           <option className="filterelement">All</option>
@@ -17,7 +16,7 @@ export default function Searchbar() {
           <option className="filterelement">Actor</option>
           <option className="filterelement">Cricketer</option>
         </select>
-        <button className="btn btn-outline-success searchbutton" type="submit">Search</button>
+        <button className="btn btn-outline-success searchbutton" type="submit" onClick={props.searchngo}>Search</button>
     </div>
   )
 }
