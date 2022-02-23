@@ -7,7 +7,12 @@ export default function Searchbar(props) {
   
        <select id="mySelect">
           <option className="filterelement">All</option>
-          <option className="filterelement">Rating</option>
+          <optgroup label='Rating'></optgroup>
+          <option className="filterelement">1</option>
+          <option className="filterelement">2</option>
+          <option className="filterelement">3</option>
+          <option className="filterelement">4</option>
+          <option className="filterelement">5</option>
           <optgroup label='Gender'></optgroup>
           <option className="filterelement">Male</option>
           <option className="filterelement">Female</option>

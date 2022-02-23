@@ -37,15 +37,14 @@ function App() {
     
       else if(y[x].text=="All") { listbox[i].style.display = ""
      }
+     else if(y[x].text==list[i].rating)   listbox[i].style.display = ""
     
       else {
         listbox[i].style.display = "none"
       }
     }
 
-    if(y[x].text=="Rating") {
-          alert("Not implemented yet")
-    }
+    
   }
 
   let searchngo = () => {
