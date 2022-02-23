@@ -30,7 +30,7 @@ export default function Navbar() {
         
         </ul>
         {/* <div className="col-md-3 text-end"> */}
-        <div style={{marginLeft:"60%"}}>
+        <div style={{marginLeft:"50%"}}>
         <button type="button" className="btn btn-danger">Sign-up</button>
         <button type="button" className="btn btn-success me-2">Login</button>
       </div>
