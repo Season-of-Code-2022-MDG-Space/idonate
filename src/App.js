@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Searchbar from './components/Searchbar';
 import Ngolist from './components/Ngolist';
-
+import Add from './components/Add';
 function App() {
   let list = [
     { gender: "Male", profession: "Actor" , rating:1 },
@@ -77,6 +77,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <Add/>
       <Searchbar searchngo={searchngo} applyfilter={applyfilter} />
       <Ngolist />
 
