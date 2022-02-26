@@ -13,10 +13,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small>And some small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>
+                
             
 
 
@@ -27,10 +24,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a> 
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>
+                
            
 
 
@@ -41,10 +35,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
             <a href="#" className="list-group-item list-group-item-action listbox">
                 <div className="d-flex w-100 justify-content-between">
@@ -53,10 +44,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
 
             <a href="#" className="list-group-item list-group-item-action listbox">
@@ -66,10 +54,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
 
             <a href="#" className="list-group-item list-group-item-action listbox">
@@ -79,10 +64,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
             <a href="#" className="list-group-item list-group-item-action listbox">
                 <div className="d-flex w-100 justify-content-between">
@@ -91,10 +73,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
             <a href="#" className="list-group-item list-group-item-action listbox">
                 <div className="d-flex w-100 justify-content-between">
@@ -103,10 +82,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
             <a href="#" className="list-group-item list-group-item-action listbox">
                 <div className="d-flex w-100 justify-content-between">
@@ -115,10 +91,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
 
             <a href="#" className="list-group-item list-group-item-action listbox">
@@ -128,10 +101,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
             <a href="#" className="list-group-item list-group-item-action listbox">
                 <div className="d-flex w-100 justify-content-between">
@@ -140,10 +110,7 @@ export default function Ngolist() {
                 </div>
                 <p className="mb-1">Some placeholder content in a paragraph.</p>
                 <small className="text-muted">And some muted small print.</small></a>
-                <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                    <label for="floatingTextarea">Comments</label>
-                </div>  
+                  
 
         </div> </>
 
