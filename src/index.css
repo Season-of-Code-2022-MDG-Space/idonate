@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.tabstext{
+  color:white !important;
+  font-size: larger !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav-item :hover {
+  background-color: blue !important;
+}
+
+.orgname{
+  font-size: x-large !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+  color:brown !important;
+}
+
+.searchbar{
+  width: 50% !important;
+  padding-left: 5px !important;
+  margin-top: 7%;
+  margin-left: 20%;
+  height: 35px;
+}
+
+#mySelect,.searchbutton {
+  border:1px solid black;
+  height: 35px !important;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.searchbutton{
+  color:black !important;
+  font-weight: 500 !important;
+}
+
+.ngolist {
+  margin-top: 5% !important;
+}
+
+.m{
+  width: 100px !important;
+}
+
+.s{
+  margin-left: 40% !important;
+  margin-top: 4px !important;
+  width: 300px !important;
+}
