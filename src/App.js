@@ -7,17 +7,16 @@ import Add from './components/Add';
 import Footer from './components/Footer';
 function App() {
   let list = [
-    { gender: "Male", profession: "Actor" , rating:1 },
-    { gender: "Female", profession: "Actor" , rating:2 },
-    { gender: "Male", profession: "Entrepreneur" , rating:3 },
-    { gender: "Female", profession: "Actor", rating:4 },
-    { gender: "Female", profession: "Minister" , rating:5 },
-    { gender: "Male", profession: "Entrepreneur", rating:4 },
-    { gender: "Male", profession: "Minister" , rating:3},
-    { gender: "Female", profession: "Minister" , rating:2},
-    { gender: "Male", profession: "Cricketer", rating:1 },
-    { gender: "Male", profession: "Actor", rating:4 },
-    { gender: "Male", profession: "Cricketer", rating:4 }
+    { Sector: "Education", State: "Madhya Pradesh" , Rating:3 },
+    { Sector: "Aged/Elderly", State: "Uttar Pradesh" , Rating:2 },
+    { Sector: "Environment", State: "Maharastra" , Rating:1 },
+    { Sector: "Women Empowerment", State: "Madhya Pradesh", Rating:3 },
+    { Sector: "Differently Abled", State: "Delhi" , Rating:2 },
+    { Sector: "Health", State: "Delhi", Rating:1 },
+    { Sector: "Health", State: "Maharasta" , Rating:3},
+    { Sector: "Environment", State: "Maharasta" , Rating:2},
+    { Sector: "Education", State: "Delhi", Rating:1 },
+   
   ]
 
   let applyfilter = () => {
@@ -29,16 +28,16 @@ function App() {
     document.getElementById('Search').value=""
     for (let i = 0; i < list.length; i++) {
 
-      if (y[x].text == list[i].gender) {
+      if (y[x].text == list[i].Sector) {
         listbox[i].style.display = ""
       }
-      else if (y[x].text == list[i].profession) {
+      else if (y[x].text == list[i].State) {
         listbox[i].style.display = ""
       }
     
       else if(y[x].text=="All") { listbox[i].style.display = ""
      }
-     else if(y[x].text==list[i].rating)   listbox[i].style.display = ""
+     else if(y[x].text==list[i].Rating)   listbox[i].style.display = ""
     
       else {
         listbox[i].style.display = "none"

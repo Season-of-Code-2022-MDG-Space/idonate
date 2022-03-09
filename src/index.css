@@ -25,7 +25,7 @@ code {
 .orgname{
   font-size: x-large !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
-  color:brown !important;
+  color:rgb(6, 251, 6) !important;
 }
 
 .searchbar{
@@ -53,7 +53,9 @@ code {
 }
 
 .m{
-  width: 100px !important;
+  width: 300px !important;
+  height: 250px !important;
+
 }
 
 .s{

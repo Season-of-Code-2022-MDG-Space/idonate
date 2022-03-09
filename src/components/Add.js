@@ -3,11 +3,11 @@ import React from 'react'
 export default function Add() {
     return(
         <div className="card s">
-        <img src="https://picsum.photos/200/300?nocache=<?php echo microtime(); ?>" className="card-img-top m" alt="..."/>
+        <img src="https://i.picsum.photos/id/678/200/300.jpg?hmac=oO5BaTGKFZ00iWC6GR1arWVrbmu2-XmgYl9ub3C_ug4" className="card-img-top m" alt="..."/>
         <div className="card-body">
-          <h5 className="card-title">Adds</h5>
-          <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+          <h5 className="card-title">iDonate</h5>
+          <p className="card-text">A platform where you can search different Charitable Trust and Not For Profit Organisations across the Nation.</p>
+          <a href="#" className="btn btn-primary">About Us</a>
         </div>
       </div>
   )
