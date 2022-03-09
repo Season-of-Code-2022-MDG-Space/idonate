@@ -11,18 +11,20 @@ export default function Searchbar(props) {
           <option className="filterelement">1</option>
           <option className="filterelement">2</option>
           <option className="filterelement">3</option>
-          <option className="filterelement">4</option>
-          <option className="filterelement">5</option>
-          <optgroup label='Gender'></optgroup>
-          <option className="filterelement">Male</option>
-          <option className="filterelement">Female</option>
-          <optgroup label='Profession'></optgroup>
-          <option className="filterelement">Minister</option>
-          <option className="filterelement">Entrepreneur</option>
-          <option className="filterelement">Actor</option>
-          <option className="filterelement">Cricketer</option>
+          <optgroup label='Sector'></optgroup>
+          <option className="filterelement">Aged/Elderly</option>
+          <option className="filterelement">Women Empowerment</option>
+          <option className="filterelement">Differently Abled</option>
+          <option className="filterelement">Education</option>
+          <option className="filterelement">Environment</option>
+          <option className="filterelement">Health</option>
+          <optgroup label='State'></optgroup>
+          <option className="filterelement">Delhi</option>
+          <option className="filterelement">Maharastra</option>
+          <option className="filterelement">Madhya Pradesh</option>
+          <option className="filterelement">Uttar Pradesh</option>
         </select>
-        <button className="btn btn-outline-success searchbutton" type="submit" onClick={props.applyfilter}>Apply</button>
+        <button className="btn btn-warning searchbutton" type="submit" onClick={props.applyfilter}>Apply</button>
     </div>
   )
 }
