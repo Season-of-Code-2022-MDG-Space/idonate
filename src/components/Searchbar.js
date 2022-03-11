@@ -1,9 +1,14 @@
 import React from 'react'
-export default function Searchbar(props) {
+import {searchngo,applyfilter} from './logic';
+
+
+export default function Searchbar() {
   return (
     <div>
       
-      <input className="searchbar" id='Search' type="text" placeholder="Donations Ka Search Engine" autoComplete='off' aria-label="Search" onKeyUp={props.searchngo}/>
+      <input className="searchbar" id='Search' type="text" 
+      placeholder="Donations Ka Search Engine" 
+      autoComplete='off' aria-label="Search" onChange={searchngo}/>
   
        <select id="mySelect">
           <option className="filterelement">All</option>
@@ -24,7 +29,10 @@ export default function Searchbar(props) {
           <option className="filterelement">Madhya Pradesh</option>
           <option className="filterelement">Uttar Pradesh</option>
         </select>
-        <button className="btn btn-warning searchbutton" type="submit" onClick={props.applyfilter}>Apply</button>
+
+        <button className="btn btn-warning searchbutton"
+         type="submit" onClick={applyfilter}>Apply</button>
+
     </div>
   )
 }
