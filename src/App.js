@@ -9,9 +9,13 @@ import Basket from './pages/Basket';
 import Blog from './pages/Blog';
 import Signup from './pages/Signup';
 
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
 function App() {
   return (
     <>
+      <Navbar/>
       <Routes>
 
         <Route exact path='/' element={<Home />} />
@@ -22,6 +26,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
 
       </Routes>
+      <Footer/>
     </>
   );
 }
