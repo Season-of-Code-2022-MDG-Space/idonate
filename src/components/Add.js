@@ -7,7 +7,7 @@ export default function Add() {
         <div className="card-body">
           <h5 className="card-title">iDonate</h5>
           <p className="card-text">A platform where you can search different Charitable Trust and Not For Profit Organisations across the Nation.</p>
-          <a href="#" className="btn btn-primary">About Us</a>
+          <a href="/contact" className="btn btn-primary">Contact Us</a>
         </div>
       </div>
   )

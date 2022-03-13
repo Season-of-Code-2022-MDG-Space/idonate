@@ -1,7 +1,7 @@
 import React from 'react';
 import Searchbar from '../components/Searchbar';
-import Ngolist from '../components/Ngolist';
 import Add from '../components/Add';
+import Display from '../components/Display';
 
 
 
@@ -11,8 +11,7 @@ function Home() {
          
           <Add/>
           <Searchbar/>
-          <Ngolist />
-        
+          <Display/>
     </>
   );
 }

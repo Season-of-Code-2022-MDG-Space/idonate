@@ -97,7 +97,8 @@ The goal of YFS is to support schools, destitute shelters, government hospitals 
                     <h5 className="mb-1 ngoname">The NGO Café</h5>
                     <small className="text-muted">Ratings: 1</small>
                 </div>
-                <p className="mb-1">Realizing the growing importance and voice of NGOs in development in general, the NGO Café was set up as a platform for NGOs to discuss, debate and disseminate information on their work, strategies and results.</p>
+                <p className="mb-1">Realizing the growing importance and voice 
+                of NGOs in development in general, the NGO Café was set up as a platform for NGOs to discuss, debate and disseminate information on their work, strategies and results.</p>
                 {/* <small className="text-muted">And some muted small print.</small> */}
                 </a>
                   
@@ -106,7 +107,9 @@ The goal of YFS is to support schools, destitute shelters, government hospitals 
                   
 
 
-        </div> </>
+        </div> 
+
+            </>
 
     )
 }
