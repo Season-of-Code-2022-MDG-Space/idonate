@@ -8,6 +8,7 @@ import Alert from './pages/Alert';
 import Basket from './pages/Basket';
 import Blog from './pages/Blog';
 import Signup from './pages/Signup';
+import Contact from './pages/Contact'
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -24,6 +25,7 @@ function App() {
         <Route path='/alert' element={<Alert />} />
         <Route path='/blog' element={<Blog />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/contact' element={<Contact/>} />
 
       </Routes>
       <Footer/>
