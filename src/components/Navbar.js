@@ -44,7 +44,7 @@ export default function Navbar() {
 
           <div style={{ marginLeft: "50%" }}>
 
-            <a href='/signup' className="btn btn-danger">Sign-up</a>
+            <a href='/signup0' className="btn btn-danger">Sign-up</a>
             <a href='/' className="btn btn-success me-2">Login</a>
             
           </div>

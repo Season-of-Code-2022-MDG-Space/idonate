@@ -1,7 +1,7 @@
 import React from 'react'
 import { save } from '../components/database'
 
-const Signup = () => {
+const Ngosignup = () => {
   return (
     <>
 
@@ -72,4 +72,4 @@ const Signup = () => {
   )
 }
 
-export default Signup;
+export default Ngosignup;
