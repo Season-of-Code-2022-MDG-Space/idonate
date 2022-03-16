@@ -1,76 +1,67 @@
 import React, { useEffect, useState } from 'react';
 import { database, ref, onValue } from '../firebase.js'
+import { save } from './function'
 
+let arr = [];
 const EhelpMain = () => {
   let [display, setDisplay] = useState([]);
-  let [amount, setAmount] = useState(0);
-  let [people, setPeople] = useState(0);
-  function save(){
-    let input=document.getElementById('submitrupee').value;
-           console.log("Reached");
-           let r=input+amount
-           setAmount(r);
-           setPeople(people+1);
-  }
 
-  let arr=[];
   useEffect(() => {
-     
-      onValue(ref(database, 'users'), (snapshot) => {
-          snapshot.forEach( (Childsnapshot) =>{ arr.push(Childsnapshot.val())}  );
-           setDisplay(arr);        }
-                                  );
-  
+
+    onValue(ref(database, 'users'), (snapshot) => {
+      snapshot.forEach((Childsnapshot) => { arr.push(Childsnapshot.val()) });
+      setDisplay(arr);
+    }
+    );
+
   }, [])
+
+
+
   return (
     <>
-    {
-    display.length===0 ? (''): display.map((element)=>{
-        
-     return ( 
+      {
+        display.length === 0 ? ('') : display.map((element, i) => {
 
-    <div className="list-group mt-3" key={element.patientname}>
+          return (
 
-      <div className="list-group-item list-group-item-action" aria-current="true">
-        <div className="d-flex w-100 justify-content-between">
+            <div className="list-group mt-3" key={element.patientname}
+             style={{backgroundColor:'rgb(255, 233, 174)'}}>
 
-          <h6 className="mb-1">{element.patientname}</h6>
-          <small>Financial Support Needed :{element.rupees}</small>
-          <small>Financial Support Provided : {amount}</small>
-          <small>UPI : {element.upi}</small>
+              <div className="list-group-item list-group-item-action" aria-current="true">
+                <div className="d-flex w-100 justify-content-between">
 
-        </div>
+                  <h6 className="mb-1">{element.patientname}</h6>
+                  <small>Financial Support Needed :{element.rupees}</small>
+                  <small>Financial Support Provided : {element.amount}</small>
+                  <small>UPI : {element.upi}</small>
 
-        <p className="mb-1">{element.issue}</p>
-        <button type="button" className="btn btn-info">
-          Number of people who helped <span className="badge bg-success">{people}</span>
-        </button>
-      </div>
+                </div>
 
-      <button className="btn btn-secondary" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-        Wanna To Help</button>
+                <p className="mb-1">{element.issue}</p>
+                <button type="button" className="btn btn-info">
+                  Number of people who helped <span className="badge bg-success">
+                    {element.numberofpeople}</span>
+                </button>
+              </div>
 
-      <div className="offcanvas offcanvas-top" tabIndex="-1" id="offcanvasTop"
-        aria-labelledby="offcanvasTopLabel">
-        <div className="offcanvas-header">
+              <div>
 
-          <h5 id="offcanvasTopLabel">Offcanvas top</h5>
+                <input placeholder='Enter to Contribute'
+                 className="btn submitrupee"/>
 
-          <button type="button" className="btn-close text-reset"
-            data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+                <button value={i} onClick={(e) => save(e)} type="button" 
+                className="btn btn-outline-success">Help</button>
 
-        <div className="offcanvas-body">
-          <input placeholder='Enter Amount in Rupees' id='submitrupee'/>
-          <button onClick={save}></button>
-        </div>
-      </div>
-    </div>
-     )})
-     }
+              </div>
+            </div>
+          )
+        })
+      }
     </>
   )
+
 }
 
 export default EhelpMain;
+export { arr }

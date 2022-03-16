@@ -53,7 +53,9 @@ export function submit(){
         relation: relation,
         rupees: rupees,
         upi: upi,
-        disorder: disorder
+        disorder: disorder,
+        amount: 0,
+        numberofpeople: 0
     });
 
     alert("Submitted Successfully");
