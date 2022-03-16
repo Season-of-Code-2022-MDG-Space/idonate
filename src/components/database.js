@@ -1,5 +1,5 @@
 import { database,set,ref } from '../firebase.js'
-import {clean } from './function.js'
+import {clean,cleanfield } from './function.js'
 function save() {
 
     let charityname = document.getElementById('charityname').value;
@@ -28,4 +28,34 @@ function save() {
     clean();
 }
 
+
+
 export { save };
+
+export function submit(){
+    let issue = document.getElementById('issue').value;
+    let patientname = document.getElementById('patientname').value;
+    let phone = document.getElementById('phone').value;
+    let disorder = document.getElementById('disorder').value;
+    let rupees = document.getElementById('rupees').value;
+    let upi = document.getElementById('upi').value;
+    let x = document.getElementById("relation");
+    let relation = x.options[x.selectedIndex].text;
+
+    let file = document.getElementById('file').files[0];
+    console.log(file)
+
+
+    set(ref(database, 'users/' + patientname), {
+        issue: issue,
+        patientname :patientname,
+        phone: phone ,
+        relation: relation,
+        rupees: rupees,
+        upi: upi,
+        disorder: disorder
+    });
+
+    alert("Submitted Successfully");
+    cleanfield();
+}

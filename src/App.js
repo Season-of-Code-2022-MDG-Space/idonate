@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Ehelp from './pages/Ehelp';
+import Helpform from './pages/Helpform';
 import Alert from './pages/Alert';
 import Basket from './pages/Basket';
 import Blog from './pages/Blog';
@@ -22,7 +23,8 @@ function App() {
 
         <Route exact path='/' element={<Home />} />
         <Route path='/basket' element={<Basket />} />
-        <Route path='/ehelp' element={<Ehelp />} />
+        <Route exact path='/ehelp' element={<Ehelp />} />
+        <Route exact path='/ehelp/helpform' element={<Helpform/>} />
         <Route path='/alert' element={<Alert />} />
         <Route path='/blog' element={<Blog />} />
         <Route exact path='/signup0' element={<Signup0 />} />

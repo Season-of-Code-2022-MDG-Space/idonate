@@ -15,7 +15,7 @@ const Ngosignup = () => {
       </div>
 
       <div className="input-group mb-3 ngoinput">
-        <input type="text" className="form-control" id="url"
+        <input type={"url"} className="form-control" id="url"
          placeholder="URL of Charity Trust" aria-describedby="basic-addon3"/>
       </div>
 
