@@ -1,7 +1,7 @@
 import React from 'react'
 import { save } from '../components/database'
 
-const Signup = () => {
+const Ngosignup = () => {
   return (
     <>
 
@@ -15,7 +15,7 @@ const Signup = () => {
       </div>
 
       <div className="input-group mb-3 ngoinput">
-        <input type="text" className="form-control" id="url"
+        <input type={"url"} className="form-control" id="url"
          placeholder="URL of Charity Trust" aria-describedby="basic-addon3"/>
       </div>
 
@@ -72,4 +72,4 @@ const Signup = () => {
   )
 }
 
-export default Signup;
+export default Ngosignup;
