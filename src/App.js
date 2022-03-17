@@ -14,6 +14,7 @@ import Contact from './pages/Contact'
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Usersignup from './pages/Usersignup';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/blog' element={<Blog />} />
         <Route exact path='/signup0' element={<Signup0 />} />
         <Route path='/signup0/ngosignup' element={<Ngosignup />} />
+        <Route path='/signup0/usersignup' element={<Usersignup />} />
         <Route path='/contact' element={<Contact/>} />
 
       </Routes>
