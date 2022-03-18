@@ -65,6 +65,7 @@ const Helpform = () => {
             <button type="button" className="btn btn-primary ngoinput" onClick={submit}>
                 I Accept above Information to be Correct</button>
         </div>
+    
     )
 }
 

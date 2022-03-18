@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { database, ref, onValue } from '../firebase.js'
-import { save } from './function'
+import { save,url } from './function'
 
 let arr = [];
 const EhelpMain = () => {
   let [display, setDisplay] = useState([]);
-
   useEffect(() => {
 
     onValue(ref(database, 'users'), (snapshot) => {
       snapshot.forEach((Childsnapshot) => { arr.push(Childsnapshot.val()) });
-      setDisplay(arr);
+      setDisplay(arr); 
     }
     );
-
+    
   }, [])
 
 
-
+  
   return (
     <>
       {
         display.length === 0 ? ('') : display.map((element, i) => {
-
+         url(element.patientname,i)
           return (
 
             <div className="list-group mt-3" key={element.patientname}
@@ -35,7 +34,8 @@ const EhelpMain = () => {
                   <small>Financial Support Needed :{element.rupees}</small>
                   <small>Financial Support Provided : {element.amount}</small>
                   <small>UPI : {element.upi}</small>
-
+                  <a  className='urlfile'>
+                    <small>Medical Proofs</small></a>
                 </div>
 
                 <p className="mb-1">{element.issue}</p>

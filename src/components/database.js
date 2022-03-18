@@ -1,5 +1,7 @@
-import { database,set,ref } from '../firebase.js'
-import {clean,cleanfield } from './function.js'
+import { database, set, ref } from '../firebase.js'
+import { clean, cleanfield } from './function.js'
+import { sref, uploadBytes, storage} from '../firebase'
+
 function save() {
 
     let charityname = document.getElementById('charityname').value;
@@ -15,12 +17,12 @@ function save() {
     let field = y.options[y.selectedIndex].text;
 
     set(ref(database, 'ngos/' + username), {
-        Charity_Name:charityname,
-        User_Name:username,
+        Charity_Name: charityname,
+        User_Name: username,
         Rating: rating,
         Field_Of_Contribution: field,
-        Address:address,
-        Url:url,
+        Address: address,
+        Url: url,
         About_Charity: description
     });
 
@@ -32,7 +34,7 @@ function save() {
 
 export { save };
 
-export function submit(){
+export function submit() {
     let issue = document.getElementById('issue').value;
     let patientname = document.getElementById('patientname').value;
     let phone = document.getElementById('phone').value;
@@ -44,20 +46,27 @@ export function submit(){
 
     let file = document.getElementById('file').files[0];
     console.log(file)
+    
+    uploadBytes(sref(storage, 'files/' + patientname), file).then((snapshot) => {
+        console.log('Uploaded a blob or file!');
+    });
 
 
+    
     set(ref(database, 'users/' + patientname), {
         issue: issue,
-        patientname :patientname,
-        phone: phone ,
+        patientname: patientname,
+        phone: phone,
         relation: relation,
         rupees: rupees,
         upi: upi,
         disorder: disorder,
         amount: 0,
-        numberofpeople: 0
+        numberofpeople: 0,
+        url:''
     });
 
     alert("Submitted Successfully");
     cleanfield();
 }
+

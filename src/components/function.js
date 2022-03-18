@@ -1,5 +1,5 @@
 import { arr } from './EhelpMain'
-import { database, ref, set } from '../firebase.js'
+import { database, ref, set,storage,getDownloadURL,sref } from '../firebase.js'
 
 function clean() {
 
@@ -28,7 +28,8 @@ function save(e){
     let i = e.target.value
     let input = document.getElementsByClassName('submitrupee')[i].value;
 
-    alert("Redirecting to Payment Gateway")
+   
+
 
     set(ref(database, 'users/' + arr[i].patientname), {
       issue: arr[i].issue,
@@ -44,6 +45,22 @@ function save(e){
 
     });
     document.getElementsByClassName('submitrupee')[i].value='';
+  
+
+    alert("Redirecting to Payment Gateway")
+
+}
+
+
+export function url(patientname,i){
+
+    getDownloadURL(sref(storage, 'files/' + patientname))
+    .then((url) => {
+       document.getElementsByClassName('urlfile')[i].href=url;
+    })
+    .catch((error) => {
+        
+    });
 }
 
 export { clean,save };

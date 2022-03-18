@@ -5,9 +5,9 @@ const Ehelp = () => {
     <div>
        
         <a href='/ehelp/helpform' 
-        style={{textDecoration:'none'}}> <small style={{marginLeft:'30%',
+        style={{textDecoration:'none'}}> <span style={{marginLeft:'30%',
         marginTop:'20% !important'}}>
-          Click Here for financial help in Medical Issues</small></a>
+          Click Here for financial help in Medical Issues</span></a>
           <EhelpMain/>
         
     </div>
