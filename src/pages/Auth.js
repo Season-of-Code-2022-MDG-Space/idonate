@@ -1,11 +1,12 @@
-import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, updateProfile, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, updateProfile, onAuthStateChanged,currentUser } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from '../firebase'
 import { useEffect, useState } from "react";
 
 export function useCuser() {
     let [cuser, setCuser] = useState();
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => { setCuser(user) })
+       const s= onAuthStateChanged(auth, (user) => { setCuser(user) })
+       return s;
     }, [])
     return cuser;
 }
@@ -71,3 +72,5 @@ export function signout() {
     }
     catch { alert("Error") }
 }
+
+export {auth,currentUser}

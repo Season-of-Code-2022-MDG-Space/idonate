@@ -46,7 +46,7 @@ export default function Navbar() {
 
             <a href='/signup0' className="btn btn-danger">Sign-up</a>
             <a href='/signup0/usersignup' className="btn btn-success me-2">Login</a>
-            
+
           </div>
         </div>
       </div>
