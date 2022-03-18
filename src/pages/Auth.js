@@ -1,6 +1,14 @@
-import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, updateProfile, onAuthStateChanged,currentUser } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
 import { app } from '../firebase'
 import { useEffect, useState } from "react";
+import {set,ref,database} from '../firebase'
+function clean() {
+    document.getElementById('userinput').value = '';
+    document.getElementById('emailinput').value = '';
+    document.getElementById('password').value = '';
+}
+
+const auth = getAuth(app);
 
 export function useCuser() {
     let [cuser, setCuser] = useState();
@@ -11,13 +19,6 @@ export function useCuser() {
     return cuser;
 }
 
-function clean() {
-    document.getElementById('userinput').value = '';
-    document.getElementById('emailinput').value = '';
-    document.getElementById('password').value = '';
-}
-
-const auth = getAuth(app);
 
 export function signup() {
 
@@ -27,24 +28,19 @@ export function signup() {
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            const user = userCredential.user;
-            alert("Created Successfully " + username)
-
-            updateProfile(auth.currentUser, {
-                displayName: username
-            }).then(() => {
-
-            }).catch((error) => {
-                alert(error.message)
-            });
+            alert("Created Successfully ");
+            const id=userCredential.user.uid;
+            set(ref(database, 'loggedusers/' + id), {
+                username:username
+             });
         })
         .catch((error) => {
-            const errorCode = error.code;
             alert(error.message);
-
         });
     clean();
+
 }
+
 
 export function signin() {
 
@@ -54,8 +50,7 @@ export function signin() {
     signInWithEmailAndPassword(auth, email, password)
 
         .then((userCredential) => {
-            const user = userCredential.user;
-            alert("Welcome Back " + user.displayName)
+            alert("Welcome Back " )
         })
 
         .catch((error) => {
@@ -65,12 +60,13 @@ export function signin() {
     clean();
 }
 
+
 export function signout() {
     try {
-        alert("Signed Out " + auth.currentUser.displayName)
+        alert("Signed Out ")
         signOut(auth)
     }
     catch { alert("Error") }
 }
 
-export {auth,currentUser}
+export {auth}
