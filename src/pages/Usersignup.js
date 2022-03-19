@@ -1,5 +1,5 @@
 import React from 'react';
-import { signin, signout, signup } from './Auth';
+import { signin, signup } from './Auth';
 
 const Usersignup = () => {
     return ( <>
@@ -29,8 +29,7 @@ const Usersignup = () => {
          <button type="button" className="btn btn-success ngoinput" 
           onClick={signin}>Log In</button>
 
-         <button type="button" className="btn btn-danger ngoinput" 
-          onClick={signout}>Log Out</button>
+         
           </>
     )
 }

@@ -4,7 +4,7 @@ import {useCuser,signout,auth} from '../pages/Auth'
 
 export default function Navbar() {
 
-
+ 
   let signupbtn=(<div style={{ marginLeft: "50% " }}>
      <a href='/signup0' className="btn btn-danger">Sign-up</a>
   <a href='/signup0/usersignup' className="btn btn-success me-2">Login</a></div>)
@@ -37,7 +37,7 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link tabstext" href="/basket">Charity Basket</a>
+              <a className="nav-link tabstext"  href="/basket">Charity Basket</a>
             </li>
 
             <li className="nav-item">
@@ -45,13 +45,13 @@ export default function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link tabstext" href="/ehelp">eHelp</a>
+              <a className="nav-link tabstext"  href="/ehelp">eHelp</a>
             </li>
 
             <li className="nav-item">
               <a className="nav-link tabstext" href="/alert">Alerts</a>
             </li>
-
+            
           </ul>
 
           
