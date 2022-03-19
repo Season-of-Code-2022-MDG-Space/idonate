@@ -37,7 +37,7 @@ code {
   height: 35px;
 }
 
-#mySelect,.searchbutton {
+.searchbutton {
   border:1px solid black;
   height: 35px !important;
   margin-left: 2px;
@@ -95,3 +95,11 @@ code {
   
 }
 
+#mySelect option {
+  width: 300px;
+}
+
+
+#mySelect {
+  height: 250px;
+}
