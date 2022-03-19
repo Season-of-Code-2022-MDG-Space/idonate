@@ -1,6 +1,7 @@
 import { database, set, ref } from '../firebase.js'
 import { clean, cleanfield } from './function.js'
 import { sref, uploadBytes, storage} from '../firebase'
+import { auth } from '../pages/Auth.js';
 
 function save() {
 
@@ -35,6 +36,8 @@ function save() {
 export { save };
 
 export function submit() {
+
+    if(auth?.currentUser){
     let issue = document.getElementById('issue').value;
     let patientname = document.getElementById('patientname').value;
     let phone = document.getElementById('phone').value;
@@ -66,7 +69,8 @@ export function submit() {
         url:''
     });
 
-    alert("Submitted Successfully");
+    alert("Submitted Successfully");  }
+    else { alert("Please Log In") }
     cleanfield();
 }
 

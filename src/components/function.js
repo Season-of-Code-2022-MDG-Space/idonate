@@ -1,6 +1,6 @@
 import { arr } from './EhelpMain'
 import { database, ref, set,storage,getDownloadURL,sref } from '../firebase.js'
-
+import { auth } from '../pages/Auth'
 function clean() {
 
     document.getElementById('charityname').value = '';
@@ -24,11 +24,12 @@ export function cleanfield() {
 
 }
 
+
 function save(e){
     let i = e.target.value
     let input = document.getElementsByClassName('submitrupee')[i].value;
 
-   
+    if(auth?.currentUser){
 
 
     set(ref(database, 'users/' + arr[i].patientname), {
@@ -44,11 +45,13 @@ function save(e){
       numberofpeople: 1 + parseInt(arr[i].numberofpeople),
 
     });
-    document.getElementsByClassName('submitrupee')[i].value='';
+  
   
 
-    alert("Redirecting to Payment Gateway")
+    alert("Redirecting to Payment Gateway")  }
 
+    else { alert("Please Log In") }
+    document.getElementsByClassName('submitrupee')[i].value='';
 }
 
 

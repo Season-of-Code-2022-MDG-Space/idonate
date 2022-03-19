@@ -1,6 +1,6 @@
 import React from 'react';
 import Searchbar from '../components/Searchbar';
-import Add from '../components/Add';
+import About from '../components/About';
 import Display from '../components/Display';
 
 
@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
          
-          <Add/>
+          <About/>
           <Searchbar/>
           <Display/>
     </>

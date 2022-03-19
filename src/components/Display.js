@@ -20,7 +20,7 @@ const Display = () => {
 
            return ( 
 
-            <div key={element.User_Name} className="card cardbox" 
+            <div key={element.User_Name} className="card cardbox" value='1'
             style={{width:"18rem",marginTop:"30px",
            width:'300px !important',border:'0px solid black',color:'green'}} >
           

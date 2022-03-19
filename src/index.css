@@ -37,7 +37,7 @@ code {
   height: 35px;
 }
 
-#mySelect,.searchbutton {
+.searchbutton {
   border:1px solid black;
   height: 35px !important;
   margin-left: 2px;
@@ -84,4 +84,22 @@ code {
   margin-left: 45% !important;
   margin-top: 8% !important;
   margin-bottom:10% !important;
+}
+
+.login{
+  margin-left: 40% !important;
+}
+
+.iot{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+
+#mySelect option {
+  width: 300px;
+}
+
+
+#mySelect {
+  height: 250px;
 }
