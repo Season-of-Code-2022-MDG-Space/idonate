@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { database, ref, onValue } from '../firebase.js'
+import Ratings  from './Ratings'
 let arr=[];
 const Display = () => {
 
@@ -16,7 +17,7 @@ const Display = () => {
     return (
         <>
           {
-          display.length===0 ? (''): display.map((element)=>{
+          display.length===0 ? (''): display.map((element,i)=>{
 
            return ( 
 
@@ -39,7 +40,7 @@ const Display = () => {
               <a href={element.Url} className="card-link" style={{textDecoration:'none'}}>
                 Link to {element.Charity_Name}</a>
             </div>
-          
+            <Ratings Charity_Name={element.Charity_Name} index={i}/>
           </div>
            
            )
